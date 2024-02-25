@@ -3,11 +3,24 @@ document.getElementById('personForm').addEventListener('submit', function (event
 
     // Get input values
     var name = document.getElementById('name').value;
-    var age = document.getElementById('age').value;
+    var age = parseInt(document.getElementById('age').value); // Parse age to integer
     var address = document.getElementById('address').value;
     var phone = document.getElementById('phone').value;
     var salary = document.getElementById('salary').value;
     var job = document.getElementById('job').value;
+
+    // Check if any input field is blank
+    if (name.trim() === '' || age.toString().trim() === '' || address.trim() === '' ||
+        phone.trim() === '' || salary.trim() === '' || job.trim() === '') {
+        alert('Please fill in all fields.');
+        return; // Exit function if any field is blank
+    }
+
+    // Validate age
+    if (age < 18 || age > 30) {
+        alert('Age must be between 18 and 30.');
+        return; // Exit function if age is invalid
+    }
 
     // Create a new row in the table
     var table = document.getElementById('personTable').getElementsByTagName('tbody')[0];
