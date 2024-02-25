@@ -6,7 +6,7 @@ document.getElementById('personForm').addEventListener('submit', function (event
     var age = parseInt(document.getElementById('age').value); // Parse age to integer
     var address = document.getElementById('address').value;
     var phone = document.getElementById('phone').value;
-    var salary = document.getElementById('salary').value;
+    var salary = parseFloat(document.getElementById('salary').value);
     var job = document.getElementById('job').value;
 
     // Check if any input field is blank
