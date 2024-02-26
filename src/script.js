@@ -60,3 +60,11 @@ document.getElementById('personForm').addEventListener('submit', function (event
     document.getElementById('salary').value = '';
     document.getElementById('job').value = '';
 });
+
+document.getElementById('resate').addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the form from reseting
+
+    document.getElementById('personTable').getElementsByTagName('tbody')[0].innerHTML = ``;
+
+
+});
