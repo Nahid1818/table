@@ -3,6 +3,17 @@ document.getElementById('personForm').addEventListener('submit', function (event
 
     // Get input values
     var name = document.getElementById('name').value;
+
+    // Check if the person's name already exists in the table
+    var table = document.getElementById('personTable').getElementsByTagName('tbody')[0];
+    for (var i = 0; i < table.rows.length; i++) {
+        if (table.rows[i].cells[1].textContent.trim() === name.trim()) {
+            alert('This person already exists in the table.');
+            return; // Exit function if person already exists
+        }
+    }
+
+    // If the person doesn't exist, continue with adding the person to the table
     var age = parseInt(document.getElementById('age').value); // Parse age to integer
     var address = document.getElementById('address').value;
     var phone = document.getElementById('phone').value;
@@ -23,7 +34,6 @@ document.getElementById('personForm').addEventListener('submit', function (event
     }
 
     // Create a new row in the table
-    var table = document.getElementById('personTable').getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.rows.length);
     var cellID = newRow.insertCell(0);
     var cellName = newRow.insertCell(1);
