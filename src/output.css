@@ -572,10 +572,6 @@ video {
   width: 100%;
 }
 
-.w-\[50\%\] {
-  width: 50%;
-}
-
 .table-auto {
   table-layout: auto;
 }
@@ -596,10 +592,6 @@ video {
 
 .grid-rows-3 {
   grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
-.grid-rows-4 {
-  grid-template-rows: repeat(4, minmax(0, 1fr));
 }
 
 .gap-x-4 {
