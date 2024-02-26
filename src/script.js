@@ -11,7 +11,7 @@ document.getElementById('personForm').addEventListener('submit', function (event
 
     // Check if any input field is blank
     if (name.trim() === '' || age.toString().trim() === '' || address.trim() === '' ||
-        phone.trim() === '' || salary.trim() === '' || job.trim() === '') {
+        phone.trim() === '' || salary === '' || job.trim() === '') {
         alert('Please fill in all fields.');
         return; // Exit function if any field is blank
     }
